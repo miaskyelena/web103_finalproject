@@ -12,7 +12,7 @@ Designed and developed by: Narinder Singh and Mia Tapia
 
 ### Inspiration
 
-Inspired heavily by ebay and the eCommerce industry, we seek to provide a unique shopping solution to meet buyer needs equipped with the latest technologies in continuously evolving landscape aiming to streamline and enhance user experience.
+Inspired heavily by ebay and the eCommerce industry, we seek to provide a unique shopping solution to meet buyer needs equipped with the latest technologies in continuously evolving landscape with the goal to streamline and enhance user experience.
 
 ## Tech Stack
 

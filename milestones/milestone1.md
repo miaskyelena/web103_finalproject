@@ -20,12 +20,27 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+During this unit, several positive aspects were notable:
+
+- Effective Team Collaboration: Our team worked cohesively and efficiently throughout the unit. Communication was clear, and team members supported one another.
+- Project Planning: We successfully planned and organized our project, defining roles and responsibilities early on.
+- Learning Progress: We made significant progress in understanding the project requirements, particularly in terms of the technical aspects and functionality.
 
 ### 2. What were some challenges your group faced in this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+While we had a successful unit, some challenges arose:
+
+- Technical Hurdles: Like any project, we encountered technical challenges that required problem-solving and debugging.
+- Time Management: Balancing project work with other commitments sometimes posed challenges in terms of time management.
+- Scope Clarification: There were moments when we needed to clarify certain project scope details, which required additional research and discussions.
+
 
 ### 3. What additional support will you need in upcoming units as you continue to work on your final project?
 
-[👉🏾👉🏾👉🏾 your answer here]
+As we progress to the next units and continue working on our final project, we anticipate needing additional support in the following areas:
+
+- Technical Guidance: Assistance with technical challenges and guidance on best practices would be invaluable.
+- Time Management Strategies: Strategies and recommendations for effective time management, especially as the project complexity increases.
+- Peer Review and Feedback: Feedback from peers or mentors on our project work to ensure we stay on the right track and receive constructive input.
+  
+We're looking forward to receiving the support we need to ensure the successful completion of our final project.

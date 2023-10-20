@@ -1,4 +1,4 @@
-# [your app name here]
+# RESTful e-Commerce 
 
 CodePath WEB103 Final Project
 
@@ -8,37 +8,40 @@ Designed and developed by: Narinder Singh and Mia Tapia
 
 ## About
 
-### Description and Purpose
-
-[text goes here]
+### Using the official eBay API, to create a full-stack e-commerce store where users can browse through the marketplace; furthermore, to create and upload product listings of their own choosing. 
 
 ### Inspiration
 
-[text goes here]
+Inspired heavily by ebay and the eCommerce industry, we seek to provide a unique shopping solution to meet buyer needs equipped with the latest technologies in continuously evolving landscape aiming to streamline and enhance user experience.
 
 ## Tech Stack
 
-Frontend:
+Frontend: 
+- Javscript (ES6)
+- React
+- Picocss
 
 Backend:
+- Express.js
+- PostgreSQL 
 
 ## Features
 
-### [Name of Feature 1]
+### Product Search and Display
 
-[short description goes here]
-
-[gif goes here]
-
-### [Name of Feature 2]
-
-[short description goes here]
+  Allow users to search for products by keywords, categories, and filters. Display search results with product details, images, prices, and seller information using the offical eBay API. Provide options for sorting and viewing search results.
 
 [gif goes here]
 
-### [Name of Feature 3]
+### Product Listing Creation
 
-[short description goes here]
+Enable users to create product listings. Sellers can upload product images, provide descriptions, set prices, and choose best-offer or fixed-price listings. Buyers can add products to their carts, and make purchases through stripe payment integration. 
+
+[gif goes here]
+
+### Product Listing Update and Deletion 
+
+Enable sellers to easily modify and remove their product listings, ensuring that listings remain accurate and up-to-date. This feature allows sellers to make price adjustments, update product descriptions, and remove sold or unavailable items, maintaining the quality of the marketplace.
 
 [gif goes here]
 

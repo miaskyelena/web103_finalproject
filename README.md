@@ -47,6 +47,15 @@ Enable sellers to easily modify and remove their product listings, ensuring that
 
 ### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
 
+### Data submitted via a POST or PATCH request is validated before the database is updated.
+
+[gif goes here]
+
+### The web app gracefully handles errors.
+
+
+[gif goes here]
+
 ## Installation Instructions
 
 [instructions go here]

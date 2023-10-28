@@ -15,4 +15,6 @@ The Products table maintains information about the products available for sale o
 
 ## Add the Entity Relationship Diagram
 
+<img width="797" alt="Screen Shot 2023-10-28 at 11 43 53 AM" src="https://github.com/Narinder44/web103_finalproject/assets/93685530/26c71606-a5b9-4e6e-954a-ae84176b035e">
+
 https://imgur.com/a/RdjYDEg

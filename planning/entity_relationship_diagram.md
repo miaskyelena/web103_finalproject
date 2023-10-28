@@ -4,14 +4,15 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 ## Create the List of Tables
 
-[👉🏾👉🏾👉🏾 List each table in your diagram]
+Buyers Table:
+The Buyers table stores information about the buyers using the platform. Each buyer is identified by a unique BuyerID and has a username, email address, and shipping address associated with their account. This table helps in managing buyer-specific data and ensuring seamless transactions.
+
+Sellers Table:
+The Sellers table contains details about the sellers on the platform. Sellers are uniquely identified by SellerID and have a username, email address, and payment information stored in this table. It facilitates the management of seller-related information, enabling secure transactions and seller verification.
+
+Products Table:
+The Products table maintains information about the products available for sale on the platform. Each product is assigned a unique ProductID and is associated with a seller through SellerID. Product details include the product title, description, price, and quantity available. This table serves as a central repository for all product-related data, ensuring accurate listings and effective inventory management.
 
 ## Add the Entity Relationship Diagram
 
-[👉🏾👉🏾👉🏾 Include an image or images of the diagram below. You may also wish to use the following markdown syntax to outline each table, as per your preference.]
-
-| Column Name | Type | Description |
-|-------------|------|-------------|
-| id | integer | primary key |
-| name | text | name of the shoe model |
-| ... | ... | ... |
+https://imgur.com/a/RdjYDEg

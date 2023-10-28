@@ -20,6 +20,7 @@ Frontend:
 - Javscript (ES6)
 - React
 - Picocss
+- Bootstrap
 
 Backend:
 - Express.js

@@ -33,7 +33,7 @@ While we completed most of our planned tasks, a few minor features and refinemen
 
 ### Which features and user stories would you consider “at risk”? How will you change your plan if those items remain “at risk”?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Implementing the authentication is "at risk" for us because we have no experience in implementing this feature. 
 
 ### 5. What additional support will you need in upcoming units as you continue to work on your final project?
 

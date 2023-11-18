@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
+import './ItemCard.css'
 const ItemCard = (props) => {
   const [liked, setLiked] = useState(false)
   const [truncate, setTruncate] = useState(false)
@@ -7,7 +9,7 @@ const ItemCard = (props) => {
   const handleLike = () => {
     setLiked(!liked)
   }
-
+  
   return (
     <div className='card'
       style={{
@@ -21,11 +23,18 @@ const ItemCard = (props) => {
               size={25}
               className='text-danger'
               onClick={handleLike}
+              style={{
+                cursor: 'pointer',
+              }}
             />
           ) : (
             <AiOutlineHeart
               size={25}
               onClick={handleLike}
+              style={{
+                cursor: 'pointer',
+
+              }}
             />
           )}
         </span>
@@ -55,29 +64,30 @@ const ItemCard = (props) => {
               overflow: 'hidden',
               whiteSpace: 'nowrap',
             }
-          
           }>
-          <h6 className='mb-0'>
-              <span className='text-dark'
-              style={{
-                textOverflow: 'ellipsis',
-                overflow: 'hidden',
-                whiteSpace: 'nowrap',
-                display: 'block',
-              }}
-              >
-                {props.title}
-              </span>
-          </h6>
+          <Link to={`/products/${props.id}`}>
+            <h6 className='mb-0 card-title'>
+                <span className='text-dark'
+                style={{
+                  textOverflow: 'ellipsis',
+                  overflow: 'hidden',
+                  whiteSpace: 'nowrap',
+                  display: 'block',
+                }}
+                >
+                  {props.title}
+                </span>
+            </h6>
+          </Link>
           </div>
-          <h6 className='text-dark' style={
+          <h5 className='text-dark' style={
             {
               fontFamily: 'Arial',
               fontSize: '1.1rem',
               fontWeight: 'bold',
             }
           
-          }>${props.price}</h6>
+          }>${props.price}</h5>
         </div>
         <div className='d-flex justify-content-between align-items-center'>
           <div className='btn-group'>

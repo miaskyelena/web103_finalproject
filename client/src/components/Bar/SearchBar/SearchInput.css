@@ -1,11 +1,10 @@
 .search-input {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 5rem;
     background-color: #f5f5f5;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 .search-input input {
@@ -14,8 +13,9 @@
     border: none;
     border-radius: 0.5rem;
     padding-left: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #333;
 }
+

@@ -1,24 +1,28 @@
 import React from 'react'
-import SearchBar from '../../components/search/SearchBar'
 import BannerImage from '../../components/banner/BannerImage'
-import ItemView from '../../components/shop/ItemView'
-import ItemLiked from '../../components/shop/ItemLiked'
-import ItemSelling from '../../components/shop/ItemSelling'
+import ItemView from '../../components/card/ViewCard/ItemView'
+import ItemLiked from '../../components/card/ViewCard/ItemLiked'
+import ItemSelling from '../../components/card/ViewCard/ItemSelling'
 import SellerBanner from '../../components/banner/SellerBanner'
-import CustomerReviews from '../../components/shop/CustomerReviews'
+import SearchBar from '../../components/Bar/SearchBar/SearchBar'
+import CustomerReviews from '../../components/card/ViewCard/CustomerReviews'
 import Footer from '../../components/footer/Footer'
-import { Container } from 'react-bootstrap'
-const HomePage = ({ session }) => {
+import CategoriesBar from '../../components/bar/CategoriesBar/CategoriesBar'
+import { Container, Row, Col } from 'react-bootstrap'
+import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
+import './HomePage.css'
+const HomePage = () => {
 
   return (
     <>
       <SearchBar />
-      <BannerImage />
-      <ItemView />
-      <ItemLiked />
-      <SellerBanner />
-      <ItemSelling />
-      <CustomerReviews />
+      <CategoriesBar />
+        <BannerImage />
+        <ItemView />
+        <ItemLiked />
+        <SellerBanner />
+        <ItemSelling />
+        <CustomerReviews />
       <Footer />
     </>
   )

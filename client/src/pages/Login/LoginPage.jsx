@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react'
+import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { supabase } from '../../Client.jsx'
-import HomePage from '../home/HomePage'
+import HomePage from '../Home/HomePage.jsx'
 import AuthPhoto from '../../assets/images/auth-photo-1.jpg'
 import './LoginPage.css'
 
 
-const LoginPage = ({ session }) => {
+const LoginPage = () => {
+    const user = useUser()
+    const supabase = useSupabaseClient()
+  
     
     async function signUpNewUser() {
         const { data, error } = await supabase.auth.signUp({
@@ -29,19 +33,8 @@ const LoginPage = ({ session }) => {
         })
       }
 
-      async function signInWithGoogle() {
-        const { data, error } = await supabase.auth.signInWithOAuth({
-          provider: 'google',
-          options: {
-            queryParams: {
-              access_type: 'offline',
-              prompt: 'consent',
-            },
-          },
-        })
-      }
       
-    if (!session) {
+    if (!user) {
         return (
             <>
             <div className='row no-gutters'>

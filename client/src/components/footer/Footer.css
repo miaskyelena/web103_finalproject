@@ -43,4 +43,9 @@
     padding: 0;
     text-align: Left;
     color: rgb(236, 236, 236);
+    text-decoration: none;
+}
+
+.footer-container a:hover{
+    color: rgb(104, 104, 104);
 }

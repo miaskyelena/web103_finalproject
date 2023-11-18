@@ -8,7 +8,7 @@ Designed and developed by: Narinder Singh and Mia Tapia
 
 ## About
 
-### Using the official eBay API, to create a full-stack e-commerce store where users can browse through the marketplace; furthermore, to create and upload product listings of their own choosing. 
+### Using the Fake Store Api , to create a full-stack e-commerce store where users can browse through the marketplace; furthermore, to create and upload product listings of their own choosing. 
 
 ### Inspiration
 

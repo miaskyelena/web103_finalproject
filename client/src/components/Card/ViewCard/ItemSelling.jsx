@@ -3,10 +3,10 @@ import { Row, Col, Container } from 'react-bootstrap'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
-import ItemCard from '../card/ItemCard'
+import ItemCard from '../ProductCard/ItemCard'
 import './ItemView.css'
 
-const ItemView = () => {
+const ItemSelling= () => {
     const [allItems, setAllItems] = useState([])
 
     useEffect(() => {
@@ -21,21 +21,23 @@ const ItemView = () => {
 
   return (
     <>
-        <div className='container-fluid ps-5 pe-5'>
+        <div className='container-fluid ps-5 pe-5 bg-light'>
             <Row>
-                <Col>
-                    <h4 className='text-left mt-3 mb-3'
+                <Col className='mb-4'>
+                    <h4 className='text-left'
                     style={{
                         fontFamily: 'Arial',
                     }}
-                    >Your Recently Viewed Items</h4>
+                    >Your Selling Items
+                    </h4>
+                    <span className='text-muted'>Items you are selling will appear here.</span>
                 </Col>
             </Row>
             <Row
             className='d-flex justify-content-center w-100 h-100' 
             >
                 <Col>
-                    <OwlCarousel className='owl-theme' loop margin={10} 
+                    <OwlCarousel className='owl-theme' loop margin={10} nav
                     responsive={{
                         0: {
                             items: 1,
@@ -50,6 +52,7 @@ const ItemView = () => {
                     >
                         {allItems.map((item) => (
                             <ItemCard 
+                            id={item.id}
                             key={item.id}
                             title={item.title}
                             price={item.price}
@@ -68,4 +71,4 @@ const ItemView = () => {
   )
 }
 
-export default ItemView
+export default ItemSelling;

@@ -1,47 +1,49 @@
 import React, {useEffect, useState}from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Navigate } from 'react-router-dom'
 import { supabase } from '../../Client.jsx'
-import { Container, Row, Col, Card, Button, Form} from 'react-bootstrap'
+import { Container, Row, Col, Card, Button} from 'react-bootstrap'
 import SearchBar from '../../components/bar/SearchBar/SearchBar.jsx'
 import ProductsApi from '../../services/ProductsApi.jsx'
 import Images from '../../components/image/Images.jsx'
 const CreateListing = () => {
-    const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [liked, setLiked] = useState(false)
-    const [imageUrl, setImageUrl] = useState('')
-    const [rating, setRating] = useState({
-        rate: 0,
-        count: 0,
+    const [newProduct, setNewProduct] = useState({
+        title: '',
+        price: '',
+        description: '',
+        category: '',
+        image_url: '',
     })
-    const { id } = useParams()
-    useEffect(() => {
-        const fetchProduct = async () => {
-            const product = await ProductsApi.getSingleProduct(id)
-            setProduct(product)
-            setLoading(false)
-        }
-        fetchProduct()
-    }
-    , [product])
 
-    console.log(product)
-
-    useEffect(() => {
-        const fetchRating = async () => {
-            const response = await fetch(`https://fakestoreapi.com/products/${id}/`)
-            const data = await response.json()
-            setRating(data.rating)
-        }
-        fetchRating()
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setNewProduct(prevState => ({
+            ...prevState,
+            [name]: value,
+        }))
     }
-    , [rating])
-    
+
+    const createProduct = async (event) => {
+        event.preventDefault()
+        
+        await supabase 
+        .from('products')
+        .insert([
+            {
+                title: newProduct.title,
+                price: newProduct.price,
+                description: newProduct.description,
+                category: newProduct.category,
+                image_url: newProduct.image_url,
+            }
+        ])
+        .select()
+        alert('Product created!');
+        <Navigate to='/' />
+    }
 
   return (
     <>
     <SearchBar />
-    <Form >
     <Container className='view-listing mt-5 ' fluid>
         <Link to=
         {`/`}
@@ -69,7 +71,7 @@ const CreateListing = () => {
 
                     }
                 }>  
-                    <Card.Img variant='top' src={product.image} style={
+                    <Card.Img variant='top' style={
                         {
                             width: '100%',
                             height: '600px',
@@ -89,8 +91,16 @@ const CreateListing = () => {
             lg={4}
             xl={4}
             >
+            <form className='create-product-form' onSubmit={createProduct}>
                 <h5 className='text-dark'>Title</h5>
-                <input className='form-control' type='text' placeholder='Title' />
+                <input 
+                className='form-control'
+                type='text' 
+                name='title'
+                placeholder='Title' 
+                onChange={handleChange}
+                required
+                />
                 <br />
                 <div className='d-flex justify-content-between'>
                 </div>
@@ -121,15 +131,35 @@ const CreateListing = () => {
                             fontSize: '1.1rem',
                             fontWeight: 'bold',
                         }
-                    }><input className='form-control' type='text' placeholder='Price ' /></h5>
+                    }><input 
+                    className='form-control'
+                    type='text'
+                    name='price'
+                    placeholder='Price ' 
+                    onChange={handleChange}
+                    required
+                    /></h5>
 
                     &nbsp; <p className='small text-muted'>+ Shipping</p>
                 </div>
+                <input 
+                    className='form-control'
+                    type='text' 
+                    name='image_url'
+                    placeholder='Image url'
+                    onChange={handleChange}
+                    required
+                     />
                 <br />
                 <h5 className='text-dark'>Description</h5>
                 <p className='small text-muted'>
-                    <textarea className='form-control' rows='5' 
-                    placeholder='Describe your product below. Include all relevant information.' />
+                    <textarea 
+                    className='form-control'
+                    name='description'
+                    rows='5' 
+                    placeholder='Describe your product below. Include all relevant information.'
+                    onChange={handleChange}
+                     />
                 </p>
                 <br />
                 <h5 className='text-dark' style={
@@ -153,12 +183,11 @@ const CreateListing = () => {
                     <Button variant='outline-success' className='w-100'>Create</Button>
                     &nbsp;
                 </div>
-            
+            </form>
             </Col>
         </Row>
 
     </Container>
-    </Form>
     </>
   )
 }

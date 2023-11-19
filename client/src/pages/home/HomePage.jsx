@@ -16,7 +16,6 @@ const HomePage = () => {
   return (
     <>
       <SearchBar />
-      <CategoriesBar />
         <BannerImage />
         <ItemView />
         <ItemLiked />

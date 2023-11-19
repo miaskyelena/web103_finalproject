@@ -24,7 +24,7 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 👉🏾👉🏾👉🏾 Check off each completed feature below.
 
-- [ ] The project includes an Express backend app and a React frontend app
+- [X] The project includes an Express backend app and a React frontend app
 - [ ] The project includes these backend-specific features:
   - [ ] At least one of each of the following database relationship in Postgres
     - [ ] one-to-many
@@ -77,20 +77,20 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+We collaborated on github projects.
 
 ### 2. What were some challenges your group faced in this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Distributing the work. 
 
 ### 3. What were some of the highlights or achievements that you are most proud of in this project?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Proud of my frontend design 
 
 ### 4. Reflecting on your web development journey so far, how have you grown since the beginning of the course?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Some improvement
 
 ### 5. Looking ahead, what are your goals related to web development, and what steps do you plan to take to achieve them?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Keep working hard to obtain a frontend engineer internship. 

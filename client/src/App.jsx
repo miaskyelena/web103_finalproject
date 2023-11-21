@@ -7,6 +7,7 @@ import HomePage from './pages/Home/HomePage.jsx'
 import ViewListing from './pages/read/ViewListing.jsx'
 import EditListing from './pages/update/EditListing.jsx'
 import CreateLisiting from './pages/create/CreateLisiting.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 const App = () => {
   const [session, setSession] = useState(null)
   
@@ -30,7 +31,8 @@ const App = () => {
         { path: '/', element: <HomePage />},
         { path: '/products/:id', element: <ViewListing />}, 
         { path: '/create', element: <CreateLisiting />}, 
-        { path: '/edit/:id', element: <EditListing />},      
+        { path: '/edit/:id', element: <EditListing />},  
+        { path: '*', element: <ErrorPage /> }    
       ]
     }
   ])
